@@ -152,14 +152,15 @@ class ExternalloginModelServers extends JModelList
 		// Add the list ordering clause.
 		$orderCol = $this->state->get('list.ordering');
 		$orderDirn = $this->state->get('list.direction');
+
 		switch ($orderCol)
 		{
 			case 'e.ordering':
-				$query->order($db->getEscaped('e.ordering ' . $orderDirn));
-				$query->order($db->getEscaped('a.ordering ASC'));
+				$query->order($db->escape('e.ordering ' . $orderDirn));
+				$query->order($db->escape('a.ordering ASC'));
 			break;
 			default:
-				$query->order($db->getEscaped($orderCol.' '.$orderDirn));
+				$query->order($db->escape($orderCol.' '.$orderDirn));
 			break;
 		}
 
