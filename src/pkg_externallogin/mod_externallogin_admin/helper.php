@@ -14,7 +14,7 @@
 // No direct access to this file
 defined('_JEXEC') or die;
 
-JModel::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_externallogin/models', 'ExternalloginModel');
+JModelLegacy::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_externallogin/models', 'ExternalloginModel');
 
 abstract class modExternalloginadminHelper
 {
