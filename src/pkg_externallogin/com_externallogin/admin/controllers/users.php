@@ -25,7 +25,7 @@ jimport('joomla.application.component.controller');
  *
  * @since  2.1.0
  */
-class ExternalloginControllerUsers extends JController
+class ExternalloginControllerUsers extends JControllerLegacy
 {
 	/**
 	 * Proxy for getModel.
@@ -50,7 +50,7 @@ class ExternalloginControllerUsers extends JController
 		JSession::checkToken() or die(JText::_('JINVALID_TOKEN'));
 
 		// Get items to publish from the request.
-		$cid = JRequest::getVar('cid', array(), '', 'array');
+		$cid = JFactory::getApplication()->input->get('cid', array(), '', 'array');
 
 		if (empty($cid))
 		{
@@ -88,7 +88,7 @@ class ExternalloginControllerUsers extends JController
 		JSession::checkToken() or die(JText::_('JINVALID_TOKEN'));
 
 		// Get items to publish from the request.
-		$cid = JRequest::getVar('cid', array(), '', 'array');
+		$cid = JFactory::getApplication()->input->get('cid', array(), '', 'array');
 
 		if (empty($cid))
 		{
@@ -126,7 +126,7 @@ class ExternalloginControllerUsers extends JController
 		JSession::checkToken() or die(JText::_('JINVALID_TOKEN'));
 
 		// Get items to publish from the request.
-		$cid = JRequest::getVar('cid', array(), '', 'array');
+		$cid = JFactory::getApplication()->input->get('cid', array(), '', 'array');
 
 		if (empty($cid))
 		{
@@ -164,7 +164,7 @@ class ExternalloginControllerUsers extends JController
 		JSession::checkToken() or die(JText::_('JINVALID_TOKEN'));
 
 		// Get items to publish from the request.
-		$cid = JRequest::getVar('cid', array(), '', 'array');
+		$cid = JFactory::getApplication()->input->get('cid', array(), '', 'array');
 		$sid = JRequest::getInt('server');
 
 		if (empty($cid))
