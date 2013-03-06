@@ -25,7 +25,7 @@ jimport('joomla.application.component.controller');
  *
  * @since  2.0.0
  */
-class ExternalloginController extends JController
+class ExternalloginController extends JControllerLegacy
 {
 	/**
 	 * @var  string  The default view for the display method.
