@@ -22,5 +22,5 @@ Community Builder
 Requirements
 ------------
 
-* Joomla!2.5
+* Joomla!3.0
 
