@@ -25,7 +25,7 @@ jimport('joomla.application.component.model');
  *
  * @since  2.0.0
  */
-class ExternalloginModelDownload extends JModel
+class ExternalloginModelDownload extends JModelLegacy
 {
 	/**
 	 * Method to auto-populate the model state.
