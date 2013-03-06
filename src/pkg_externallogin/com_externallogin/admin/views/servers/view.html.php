@@ -25,7 +25,7 @@ jimport('joomla.application.component.view');
  *             
  * @since      2.0.0
  */
-class ExternalloginViewServers extends JView
+class ExternalloginViewServers extends JViewLegacy
 {
 
 	/**
@@ -50,8 +50,9 @@ class ExternalloginViewServers extends JView
 		// Check for errors.
 		if (count($errors = $this->get('Errors'))) 
 		{
-			JError::raiseError(500, implode('<br />', $errors));
-			return false;
+            var_dump($errors);
+			//JError::raiseError(500, implode('<br />', $errors));
+			//return false;
 		}
 
 		// Assign data to the view
@@ -64,6 +65,7 @@ class ExternalloginViewServers extends JView
 
 		// Display the template
 		parent::display($tpl);
+       
 	}
 
 	/**
